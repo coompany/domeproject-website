@@ -1,0 +1,187 @@
+- var base_url = 'https://domeproject.space'
+- var title = 'DOME - Drone Operations for Mars Environment'
+- var description = 'The DOME Project (Drone Operations for Mars Exploration) is a'
+- description += ' research group, builded between universities and companies which'
+- description += ' aim is to develop new remote and autonomous operated aerial'
+- description += ' platforms for the Exploration of the Mars surface.'
+- description += ' Aerial drone platforms are a cutting-edge technology asset in an'
+- description += ' huge range of human operations as medical, firefighting and'
+- description += ' military scenarios. In the extraplanetary exploration the aerial drone'
+- description += ' platforms can cover the operational conditions between the high'
+- description += ' precision capabilities of the surface rovers and the extensive'
+- description += ' areas coverage capabilites typical of the orbital operations.'
+doctype html
+html(lang='en')
+  head
+    meta(charset='utf-8')
+    meta(viewport='width=device-width, initial-scale=1, shrink-to-fit=no')
+    meta(property='og:type', content='website')
+    meta(property='og:url', content=base_url)
+    meta(property='og:title', content=title)
+    meta(property='og:description', content=description)
+    meta(property='og:image', content=base_url + '/' + require('./assets/dome_logo.png'))
+    link(rel='shortcut icon', type='image/png', href=require('./assets/favicon.png'))
+    title= title
+  body
+    #fb-root
+    script.
+      (function(d, s, id) {
+        var js, fjs = d.getElementsByTagName(s)[0];
+        if (d.getElementById(id)) return;
+        js = d.createElement(s); js.id = id;
+        js.src = 'https://connect.facebook.net/en_EN/sdk.js#xfbml=1&version=v3.2';
+        fjs.parentNode.insertBefore(js, fjs);
+      }(document, 'script', 'facebook-jssdk'));
+
+    .vertical-center#logo-container
+      .container
+        div
+          img.img-fluid(src=require('./assets/dome_logo.png'), alt='DOME')
+        h1 Drone Operations for<br />Mars Environment
+
+    .vertical-center.section.reverse#project-container
+      .container
+        h3.title The DOME project
+        .row
+          .col-12.col-lg-6.col-text
+            p
+              | The DOME Project (Drone Operations for Mars Exploration) is a
+              | research group, builded between universities and companies which
+              | aim is to develop new remote and autonomous operated aerial
+              | platforms for the Exploration of the Mars surface.<br/>
+              | Aerial drone platforms are a cutting-edge technology asset in an
+              | huge range of human operations as medical, firefighting and
+              | military scenarios. In the extraplanetary exploration the aerial drone
+              | platforms can cover the operational conditions between the high
+              | precision capabilities of the surface rovers and the extensive
+              | areas coverage capabilites typical of the orbital operations.
+            p
+              | In almost 60 years of human exploration of Mars, we tested a wide
+              | range of technologies on its surface, using platforms as Rovers,
+              | probes and orbiters. Mars is the planets with the biggest robot
+              | population in the solar system.<br/>
+              | Right now the most realistic strategy for a sustainble human
+              | presence on Mars is through the ISRU (In Situ Resources Utilization),
+              | which use can significantly reduce the need of continous resupply
+              | missions from earth.<br/>
+              | Until we explored less then the 1% of the Mars surface. We need
+              | new platforms to rapidly increase our exploration capabilities if we
+              | want to seriously boost the first human missions.
+          .col-12.col-lg-6.col-pic
+            img.img-fluid(src=require('./assets/foto_mars.png'))
+
+    .vertical-center.section#technology-container
+      .container
+        h3.title Technology
+        .row
+          .col-12.col-lg-6.col-pic
+            img.img-fluid(src=require('./assets/foto_drone.png'))
+          .col-12.col-lg-6.col-text
+            p
+              | Aerial Drone technology has evolved faster and faster during the
+              | last years thanks to its recognised value for the automation of the
+              | human activities. The hardware miniaturization and high efficency
+              | of the machine learning protocols reached, brought this technology
+              | to a fundamental role in high-risks scenarios.<br/>
+              | Mars, thanks to its similarity with the Earth in terms of planetary
+              | environmental condition, represent a total new ground to expand
+              | the boundaries of this technology.<br/>
+              | Aerial drones can become a fundamental subsystem of every
+              | human activity on Mars: logistics, safety inspections, surface
+              | mapping and multispectral analysis can be safely leaved to
+              | swarms of autonomous flying drones.
+            p The DOME project research background is focused on:
+            ul
+              li Deep learning algorythm
+              li Solar power management
+              li Object Tracking and obstacle avoidance
+              li Human-Machine Interaction
+              li Swarming
+              li Flight attitude in mars atmosphere
+              li Remote sensing
+              li Aerial mapping
+
+    .vertical-center.section.reverse#research-container
+      .container
+        h3.title Research
+        .row
+          .col-12.col-lg-6.col-text
+            p X-5 VTOL MAPPING DRONE
+            p
+              | The X-5 Drone is an experimental concept for an autonomous
+              |  aerial platform designed to complement the firsts human crews on
+              | the martian surface. The X-5 is powered by lightweights flexible
+              | double-junction solar panels, that assure a dawn-sunset flight
+              | autonomy. Thanks to its VTOL capabilites, the Drone can autonomously
+              | take off and reach the mission objectives without the need
+              | for a direct control from the crew.
+            p
+              | The X-5 Payload is composed by 2 cameras (one fixed global-shutter
+              | camera and one for navigation) and a huge range of
+              | sensors. The camera can be switched for more mission-specific
+              | payloads such as multispectral sensors or thermal vision devices.
+            p The operational scenarios covered by the X-5 are:
+            ul
+              li Photogrammetry mapping
+              li Surface composition analysis
+              li Search &amp; rescue missions
+            p
+              | The X-5 Drone will be test by the crew 212 during the LATAM III
+              | mission at the MDRS.
+          .col-12.col-lg-6.col-pic
+            img.img-fluid(src=require('./assets/modello_drone.png'))
+
+    .vertical-center.section#news-container
+      .container
+        h3.title News
+        .row
+          .col-12.col-lg-6
+            .fb-page(data-href='https://www.facebook.com/DOMEoperations',
+                data-tabs='timeline', data-small-header='false',
+                data-adapt-container-width='true', data-width='500',
+                data-hide-cover='false', data-show-facepile='true')
+              blockquote.fb-xfbml-parse-ignore(cite='https://www.facebook.com/DOMEoperations')
+                a(href='https://www.facebook.com/DOMEoperations')
+                  | DOME - Drone Operations for Martian Environment
+          .col-12.col-lg-6
+            a.twitter-timeline(href='https://twitter.com/EprojectDom?ref_src=twsrc%5Etfw')
+              | Tweets by EprojectDom
+            script(async, src='https://platform.twitter.com/widgets.js', charset='utf-8')
+
+    .vertical-center.section#partners-container
+      .container
+        h3.title Partners
+        .row
+          .col-4
+            a(href='https://coompany.io', target='_blank', title='Coompany')
+              img.img-fluid(src=require('./assets/coom.svg'), alt='Coompany')
+        .row
+          .col
+            a(href='http://neutech.it', target='_blank', title='Neutech')
+              img.img-fluid(src=require('./assets/neutech_logo.png'), alt='Neutech')
+          .col
+            a(href='http://www.iuav.it/SISTEMA-DE/Laboratori2/', target='_blank', title='IUAV')
+              img.img-fluid(src=require('./assets/IUAV.svg'), alt='IUAV')
+          .col
+            a(href='https://airvision.it/', target='_blank', title='Airvision')
+              img.img-fluid(src=require('./assets/airvision_logo.png'), alt='Airvision')
+        .row
+          .col-4
+            a(href='https://www.marssociety.org/', target='_blank', title='Mars Society')
+              img.img-fluid(src=require('./assets/Mars_society_logo.png'), alt='Mars Society')
+
+    footer
+      .container-fluid
+        .row
+          .col-12.col-md-6
+            p
+              | DOME Project<br />
+              | via Pra' dei Roveri 2d<br />
+              | 31021 Mogliano Veneto (TV)
+            p &copy; 2018 Coompany s.r.l.s. Italy. All rights reserved.
+          .col-12.col-md-6
+            p: a(href='mailto:drone@domeproject.space', target='_blank')
+              | drone@domeproject.space
+            ul.list-unstyled
+              li: a(href='https://www.facebook.com/DOMEoperations', target='_blank') Facebook
+              li: a(href='https://twitter.com/EprojectDom', target='_blank') Twitter

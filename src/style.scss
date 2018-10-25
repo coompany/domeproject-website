@@ -1,0 +1,216 @@
+@font-face {
+  font-family: 'Aktiv Grotesk';
+  src: url('./assets/fonts/aktivgrotesk-bold-webfont.woff2') format('woff2'),
+       url('./assets/fonts/aktivgrotesk-bold-webfont.woff') format('woff');
+  font-weight: bold;
+}
+
+@font-face {
+  font-family: 'Aktiv Grotesk';
+  src: url('./assets/fonts/aktivgrotesk-bolditalic-webfont.woff2') format('woff2'),
+       url('./assets/fonts/aktivgrotesk-bolditalic-webfont.woff') format('woff');
+  font-weight: bold;
+  font-style: italic;
+}
+
+@font-face {
+  font-family: 'Aktiv Grotesk';
+  src: url('./assets/fonts/aktivgrotesk-italic-webfont.woff2') format('woff2'),
+       url('./assets/fonts/aktivgrotesk-italic-webfont.woff') format('woff');
+  font-style: italic;
+}
+
+@font-face {
+  font-family: 'Aktiv Grotesk';
+  src: url('./assets/fonts/aktivgrotesk-light-webfont.woff2') format('woff2'),
+       url('./assets/fonts/aktivgrotesk-light-webfont.woff') format('woff');
+  font-weight: 300;
+}
+
+@font-face {
+  font-family: 'Aktiv Grotesk';
+  src: url('./assets/fonts/aktivgrotesk-lightitalic-webfont.woff2') format('woff2'),
+       url('./assets/fonts/aktivgrotesk-lightitalic-webfont.woff') format('woff');
+  font-weight: 300;
+  font-style: italic;
+}
+
+@font-face {
+  font-family: 'Aktiv Grotesk';
+  src: url('./assets/fonts/aktivgrotesk-medium-webfont.woff2') format('woff2'),
+       url('./assets/fonts/aktivgrotesk-medium-webfont.woff') format('woff');
+  font-weight: 500;
+}
+
+@font-face {
+  font-family: 'Aktiv Grotesk';
+  src: url('./assets/fonts/aktivgrotesk-mediumitalic-webfont.woff2') format('woff2'),
+       url('./assets/fonts/aktivgrotesk-mediumitalic-webfont.woff') format('woff');
+  font-weight: 500;
+  font-style: italic;
+}
+
+@font-face {
+  font-family: 'Aktiv Grotesk';
+  src: url('./assets/fonts/aktivgrotesk-regular-webfont.woff2') format('woff2'),
+       url('./assets/fonts/aktivgrotesk-regular-webfont.woff') format('woff');
+}
+
+@font-face {
+  font-family: Narita;
+  src: url('./assets/fonts/narita-monospace-webfont.woff2') format('woff2'),
+       url('./assets/fonts/narita-monospace-webfont.woff') format('woff');
+}
+
+$tomato: rgb(237, 82, 63);
+$athens-grey: rgb(230, 230, 230);
+$supernova: rgb(251, 176, 59);
+$body-color: black;
+$body-bg: white;
+$font-family-monospace: Narita;
+$font-family-sans-serif: 'Aktiv Grotesk';
+$font-size-base: 1.8rem;
+$line-height-base: 1.2;
+$headings-font-family: $font-family-monospace;
+$headings-font-weight: normal;
+$link-color: $body-color;
+
+@import "~bootstrap/scss/functions";
+@import "~bootstrap/scss/variables";
+@import "~bootstrap/scss/mixins";
+
+@import "~bootstrap/scss/reboot";
+@import "~bootstrap/scss/type";
+@import "~bootstrap/scss/grid";
+@import "~bootstrap/scss/images";
+
+
+@mixin vertical-center($size: 100vh) {
+  min-height: $size;
+  display: flex;
+  align-items: center;
+  padding: map-get($spacers, 5) 0;
+}
+
+.vertical-center {
+  @include vertical-center;
+}
+
+.section {
+  .title {
+    text-align: center;
+    margin-bottom: map-get($spacers, 5);
+  }
+  .col-text {
+    text-align: justify;
+  }
+  .col-pic {
+    margin-bottom: map-get($spacers, 5);
+    align-self: center;
+    text-align: center;
+  }
+}
+
+.reverse .row {
+  flex-direction: column-reverse;
+}
+
+#logo-container {
+  .container {
+    & > div, & > h1 {
+      text-align: center;
+    }
+    img {
+      max-height: 70vh;
+    }
+    h1 {
+      font-size: 2rem;
+    }
+  }
+}
+
+#project-container {
+  background-color: $tomato;
+}
+
+#research-container {
+  background-color: $athens-grey;
+}
+
+#news-container {
+  background-color: $supernova;
+  color: white;
+  [class^='col'] {
+    text-align: center;
+    &:first-of-type {
+      margin-bottom: map-get($spacers, 5);
+    }
+  }
+}
+
+#partners-container {
+  [class^='col'] {
+    text-align: center;
+  }
+  img {
+    max-height: 160px;
+  }
+  .row {
+    align-items: center;
+    justify-content: center;
+  }
+  .row:last-of-type {
+    margin-top: map-get($spacers, 3);
+  }
+}
+
+footer {
+  font-family: $font-family-monospace;
+  font-size: 1.2rem;
+  background-color: $athens-grey;
+  padding: map-get($spacers, 5);
+  .row {
+    flex-direction: column-reverse;
+  }
+  [class^='col']:first-of-type {
+    margin-top: map-get($spacers, 4);
+    p:last-of-type {
+      margin-bottom: 0;
+    }
+  }
+  .list-unstyled {
+    margin-bottom: 0;
+  }
+}
+
+@include media-breakpoint-up(md) {
+  footer {
+    .row {
+      flex-direction: row;
+    }
+    [class^='col']:first-of-type {
+      margin-top: 0;
+    }
+  }
+}
+
+@include media-breakpoint-up(lg) {
+  body {
+    font-size: 1.5rem;
+  }
+  .section .col-pic {
+    margin-bottom: 0;
+  }
+  .reverse .row {
+    flex-direction: row;
+  }
+  #news-container [class^='col']:first-of-type {
+    margin-bottom: 0;
+  }
+}
+
+@include media-breakpoint-up(xl) {
+  body {
+    font-size: 1.3rem;
+  }
+}
