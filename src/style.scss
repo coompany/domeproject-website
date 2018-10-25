@@ -100,6 +100,7 @@ $link-color: $body-color;
   .title {
     text-align: center;
     margin-bottom: map-get($spacers, 5);
+    font-size: 2.8rem;
   }
   .col-text {
     text-align: justify;
@@ -121,10 +122,11 @@ $link-color: $body-color;
       text-align: center;
     }
     img {
-      max-height: 70vh;
+      max-height: 50vh;
     }
     h1 {
       font-size: 2rem;
+      margin-top: 2rem;
     }
   }
 }
@@ -153,7 +155,7 @@ $link-color: $body-color;
     text-align: center;
   }
   img {
-    max-height: 160px;
+    max-height: 200px;
   }
   .row {
     align-items: center;
@@ -196,10 +198,16 @@ footer {
 
 @include media-breakpoint-up(lg) {
   body {
-    font-size: 1.5rem;
+    font-size: 1.19rem;
   }
   .section .col-pic {
     margin-bottom: 0;
+  }
+  .section {
+    .col-pic, .col-text {
+      padding-left: 25px;
+      padding-right: 25px;
+    }
   }
   .reverse .row {
     flex-direction: row;
@@ -207,10 +215,7 @@ footer {
   #news-container [class^='col']:first-of-type {
     margin-bottom: 0;
   }
-}
-
-@include media-breakpoint-up(xl) {
-  body {
-    font-size: 1.3rem;
+  #partners-container img {
+    max-height: 120px;
   }
 }
