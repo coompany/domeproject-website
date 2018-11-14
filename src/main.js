@@ -25,12 +25,10 @@ jQuery(document).ready($ => {
       const difference = start - e.touches[0].pageX;
       if (Math.abs(difference) >= threshold) {
         cancelTouch();
-        if (difference > 0) {
+        if (difference > 0)
           carousel.carousel('next');
-        }
-        else {
+        else
           carousel.carousel('prev');
-        }
       }
     }
   }
