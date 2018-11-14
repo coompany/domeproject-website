@@ -36,6 +36,15 @@ const rules = [
       'sass-loader'
     ]
   }, {
+    test: /\.m?js$/,
+    exclude: /(node_modules|bower_components)/,
+    use: {
+      loader: 'babel-loader',
+      options: {
+        presets: ['@babel/preset-env']
+      }
+    }
+  }, {
     test: /\.(png|svg|jpg|gif)$/,
     loader: 'file-loader'
   }, {
@@ -55,7 +64,7 @@ const config = {
   mode: mode,
   resolve: {
     alias: {
-      'jquery': 'jquery/dist/jquery.slim.js',
+      'jquery': 'jquery/dist/jquery.slim.js'
     }
   },
   module: { rules },
