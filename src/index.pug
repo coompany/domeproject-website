@@ -102,34 +102,79 @@ html(lang='en')
               li Aerial mapping
 
     .vertical-center.section.reverse#research-container
-      .container
+      .container-fluid
         h3.title Research
-        .row
-          .col-12.col-lg-6.col-text
-            p X-5 VTOL MAPPING DRONE
-            p
-              | The X-5 Drone is an experimental concept for an autonomous
-              |  aerial platform designed to complement the firsts human crews on
-              | the martian surface. The X-5 is powered by lightweights flexible
-              | double-junction solar panels, that assure a dawn-sunset flight
-              | autonomy. Thanks to its VTOL capabilities, the Drone can autonomously
-              | take off and reach the mission objectives without the need
-              | for a direct control from the crew.
-            p
-              | The X-5 Payload is composed by 2 cameras (one fixed global-shutter
-              | camera and one for navigation) and a huge range of
-              | sensors. The camera can be switched for more mission-specific
-              | payloads such as multispectral sensors or thermal vision devices.
-            p The operational scenarios covered by the X-5 are:
-            ul
-              li Photogrammetry mapping
-              li Surface composition analysis
-              li Search &amp; rescue missions
-            p
-              | The X-5 Drone will be tested by the crew 212 during the LATAM III
-              | mission at the MDRS.
-          .col-12.col-lg-6.col-pic
-            img.img-fluid(src=require('./assets/modello_drone.png'))
+        #research-carousel.carousel.slide(data-keyboard='false', data-pause='true')
+          ol.carousel-indicators.d-xl-none
+            li.active(data-target='#research-carousel', data-slide-to='0')
+            li(data-target='#research-carousel', data-slide-to='1')
+          .carousel-inner
+            .carousel-item.active
+              .container
+                .row
+                  .col-12.col-lg-6.col-text
+                    p X-5 VTOL MAPPING DRONE
+                    p
+                      | The X-5 Drone is an experimental concept for an autonomous
+                      |  aerial platform designed to complement the firsts human crews on
+                      | the martian surface. The X-5 is powered by lightweights flexible
+                      | double-junction solar panels, that assure a dawn-sunset flight
+                      | autonomy. Thanks to its VTOL capabilities, the Drone can autonomously
+                      | take off and reach the mission objectives without the need
+                      | for a direct control from the crew.
+                    p
+                      | The X-5 Payload is composed by 2 cameras (one fixed global-shutter
+                      | camera and one for navigation) and a huge range of
+                      | sensors. The camera can be switched for more mission-specific
+                      | payloads such as multispectral sensors or thermal vision devices.
+                    p The operational scenarios covered by the X-5 are:
+                    ul
+                      li Photogrammetry mapping
+                      li Surface composition analysis
+                      li Search &amp; rescue missions
+                    p
+                      | The X-5 Drone will be tested by the crew 212 during the LATAM III
+                      | mission at the MDRS.
+                  .col-12.col-lg-6.col-pic
+                    img.img-fluid(src=require('./assets/modello_drone.png'))
+            .carousel-item
+              .container
+                .row
+                  .col-12.col-lg-6.col-text
+                    p VESTA
+                    p
+                      | The project consists on testing possible mission scenarios
+                      | for an unmanned aerial vehicle in the proximity of the MDRS,
+                      | to evaluate its utility and the amount of crew involvement
+                      | that would be required. A quadcopter will be used to
+                      | perform multiple missions during EVAs, and the possibility
+                      | of commanding the vehicle from inside the station will be
+                      | evaluated. Focus will be given to navigation technologies,
+                      | with the possibility of testing a system of beacons distributed
+                      | around the station to allow the triangulation of the signal;
+                      | this is due to the current absence of a global positioning
+                      | system on Mars.
+                    p
+                      | Two different types of scenarios will be evaluated: exploration
+                      | and monitoring. In the first case, the drone is flying
+                      | autonomously and it’s used by the crew from the inside of
+                      | the station to take pictures of the surroundings. This
+                      | enables the crew to acquire a general understanding of
+                      | the environment around the station, and can also be used
+                      | as a weathercasting system for sandstorms. For monitoring
+                      | missions, the drone looks back at the station and navigates
+                      | autonomously to specific points of interest on the MDRS
+                      | facilities and allows their observation by the crew.
+                  .col-12.col-lg-6.col-pic
+                    img.img-fluid(src=require('./assets/vesta.jpg'))
+          a.carousel-control-prev.d-none.d-xl-flex(href='#research-carousel',
+                                                   role='button', data-slide='prev')
+            span.carousel-control-prev-icon(aria-hidden='true')
+            span.sr-only Previous
+          a.carousel-control-next.d-none.d-xl-flex(href='#research-carousel',
+                                                   role='button', data-slide='next')
+            span.carousel-control-next-icon(aria-hidden='true')
+            span.sr-only Next
 
     .vertical-center.section#news-container
       .container

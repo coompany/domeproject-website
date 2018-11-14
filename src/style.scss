@@ -83,6 +83,8 @@ $link-color: $body-color;
 @import "~bootstrap/scss/type";
 @import "~bootstrap/scss/grid";
 @import "~bootstrap/scss/images";
+@import "~bootstrap/scss/carousel";
+@import "~bootstrap/scss/utilities";
 
 
 @mixin vertical-center($size: 100vh) {
@@ -137,6 +139,9 @@ $link-color: $body-color;
 
 #research-container {
   background-color: $athens-grey;
+  .carousel-indicators {
+    bottom: - map-get($spacers, 5);
+  }
 }
 
 #news-container {
