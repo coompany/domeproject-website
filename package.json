@@ -7,7 +7,7 @@
     "test": "echo \"Error: no test specified\" && exit 1",
     "build": "webpack",
     "watch": "webpack --watch",
-    "start": "webpack-dev-server --open"
+    "start": "webpack-dev-server --port 8080 --host 0.0.0.0"
   },
   "author": "Andrea Jemmett <andrea@coompany.io>",
   "devDependencies": {
